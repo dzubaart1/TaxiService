@@ -1,0 +1,17 @@
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\bin\Debug\net6.0-windows\TaxiClient.exe
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\bin\Debug\net6.0-windows\TaxiClient.deps.json
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\bin\Debug\net6.0-windows\TaxiClient.runtimeconfig.json
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\bin\Debug\net6.0-windows\TaxiClient.dll
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\bin\Debug\net6.0-windows\TaxiClient.pdb
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.csproj.AssemblyReference.cache
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form1.resources
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.csproj.GenerateResource.cache
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.AssemblyInfoInputs.cache
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.AssemblyInfo.cs
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.csproj.CoreCompileInputs.cache
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.dll
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\refint\TaxiClient.dll
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.pdb
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.genruntimeconfig.cache
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\ref\TaxiClient.dll

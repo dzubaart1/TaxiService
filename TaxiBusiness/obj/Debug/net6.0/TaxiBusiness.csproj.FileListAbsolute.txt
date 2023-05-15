@@ -1,0 +1,5 @@
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\TaxiBusiness\obj\Debug\net6.0\TaxiBusiness.csproj.AssemblyReference.cache
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\TaxiBusiness\obj\Debug\net6.0\TaxiBusiness.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\TaxiBusiness\obj\Debug\net6.0\TaxiBusiness.AssemblyInfoInputs.cache
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\TaxiBusiness\obj\Debug\net6.0\TaxiBusiness.AssemblyInfo.cs
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\TaxiBusiness\obj\Debug\net6.0\TaxiBusiness.csproj.CoreCompileInputs.cache

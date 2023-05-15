@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dzubaart\\source\\repos\\WinFormsApp1\\WinFormsApp1\\TaxiClient.csproj": {}
+    "C:\\Users\\Dzubaart\\Documents\\GitHub\\TaxiService\\WinFormsApp1\\TaxiClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dzubaart\\source\\repos\\WinFormsApp1\\WinFormsApp1\\TaxiClient.csproj": {
+    "C:\\Users\\Dzubaart\\Documents\\GitHub\\TaxiService\\WinFormsApp1\\TaxiClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dzubaart\\source\\repos\\WinFormsApp1\\WinFormsApp1\\TaxiClient.csproj",
+        "projectUniqueName": "C:\\Users\\Dzubaart\\Documents\\GitHub\\TaxiService\\WinFormsApp1\\TaxiClient.csproj",
         "projectName": "TaxiClient",
-        "projectPath": "C:\\Users\\Dzubaart\\source\\repos\\WinFormsApp1\\WinFormsApp1\\TaxiClient.csproj",
+        "projectPath": "C:\\Users\\Dzubaart\\Documents\\GitHub\\TaxiService\\WinFormsApp1\\TaxiClient.csproj",
         "packagesPath": "C:\\Users\\Dzubaart\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dzubaart\\source\\repos\\WinFormsApp1\\WinFormsApp1\\obj\\",
+        "outputPath": "C:\\Users\\Dzubaart\\Documents\\GitHub\\TaxiService\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dzubaart\\AppData\\Roaming\\NuGet\\NuGet.Config",

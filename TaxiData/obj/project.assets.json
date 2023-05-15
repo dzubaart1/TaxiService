@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dzubaart\\source\\repos\\WinFormsApp1\\TaxiData\\TaxiData.csproj",
+      "projectUniqueName": "C:\\Users\\Dzubaart\\Documents\\GitHub\\TaxiService\\TaxiData\\TaxiData.csproj",
       "projectName": "TaxiData",
-      "projectPath": "C:\\Users\\Dzubaart\\source\\repos\\WinFormsApp1\\TaxiData\\TaxiData.csproj",
+      "projectPath": "C:\\Users\\Dzubaart\\Documents\\GitHub\\TaxiService\\TaxiData\\TaxiData.csproj",
       "packagesPath": "C:\\Users\\Dzubaart\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dzubaart\\source\\repos\\WinFormsApp1\\TaxiData\\obj\\",
+      "outputPath": "C:\\Users\\Dzubaart\\Documents\\GitHub\\TaxiService\\TaxiData\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dzubaart\\AppData\\Roaming\\NuGet\\NuGet.Config",
