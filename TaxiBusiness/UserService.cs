@@ -5,22 +5,20 @@ namespace TaxiBusiness
     public class UserService : IService
     {
         private List<User> _users;
-        private Admin _admin;
 
         public UserService()
         {
             _users = new List<User>();
-            _admin = new Admin("123", "123");
         }
 
         public void AddUser(string login, string password)
         {
-            _users.Add(_admin.AddUser(login, password));
+            _users.Add(new User(login, password));
         }
 
         public void RemoveUser(User user)
         {
-            _users.Remove(_admin.RemoveUser(user));
+            _users.Remove(user);
         }
 
         public void EditUser(int id, string login, string password)
@@ -29,7 +27,7 @@ namespace TaxiBusiness
             {
                 if (user.Id == id)
                 {
-                    _admin.EditUser(login, password);
+                    user.EditUser(login, password);
                 }
             }
         }
