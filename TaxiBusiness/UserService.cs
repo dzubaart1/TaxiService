@@ -1,4 +1,5 @@
 ﻿using TaxiData.Entities;
+using TaxiData.Models;
 
 namespace TaxiBusiness
 {
@@ -11,9 +12,9 @@ namespace TaxiBusiness
             _users = new List<User>();
         }
 
-        public void AddUser(string login, string password)
+        public void AddUser(string login, string password, UserType userType)
         {
-            _users.Add(new User(login, password));
+            _users.Add(new User(login, password, userType));
         }
 
         public void RemoveUser(User user)

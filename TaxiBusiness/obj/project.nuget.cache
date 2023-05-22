@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "W4YYHQjxgEx9CMWs4B9elfI4egyqwz8qznahTuiob9A4MdNe07Cw/8zHXYVdzliWh9fDKVNsIKczIBUS3hewuA==",
+  "dgSpecHash": "xme1P7Rc8eSvKhCKFHoxcp32kDpMjXpiLuDl4ND9zXCYYAS8O1/Bh2GKpucG/8LzeKShMmv/yQtA4PWwuWMWtg==",
   "success": true,
   "projectFilePath": "C:\\Users\\HYPERPC\\Documents\\GitHub\\TaxiService\\TaxiBusiness\\TaxiBusiness.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\HYPERPC\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
