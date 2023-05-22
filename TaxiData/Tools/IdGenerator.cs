@@ -1,12 +1,12 @@
 ﻿namespace TaxiData.Tools
 {
-    public static class IdGenerator
+    public class IdGenerator
     {
-        private static int _id;
+        public int CurrentId { get; private set; }
 
-        public static int GenerateId()
+        public int GenerateId()
         {
-            return ++_id;
+            return ++CurrentId;
         }
     }
 }

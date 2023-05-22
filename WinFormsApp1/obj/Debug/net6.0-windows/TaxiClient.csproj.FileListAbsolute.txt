@@ -15,3 +15,15 @@ C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-win
 C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.pdb
 C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.genruntimeconfig.cache
 C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\ref\TaxiClient.dll
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\bin\Debug\net6.0-windows\TaxiData.deps.json
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\bin\Debug\net6.0-windows\TaxiData.runtimeconfig.json
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\bin\Debug\net6.0-windows\TaxiData.exe
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\bin\Debug\net6.0-windows\TaxiData.dll
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\bin\Debug\net6.0-windows\TaxiData.pdb
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.csproj.CopyComplete
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\bin\Debug\net6.0-windows\TaxiBusiness.deps.json
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\bin\Debug\net6.0-windows\TaxiBusiness.runtimeconfig.json
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\bin\Debug\net6.0-windows\TaxiBusiness.exe
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\bin\Debug\net6.0-windows\TaxiBusiness.dll
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\bin\Debug\net6.0-windows\TaxiBusiness.pdb

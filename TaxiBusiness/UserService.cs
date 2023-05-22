@@ -3,18 +3,22 @@ using TaxiData.Models;
 
 namespace TaxiBusiness
 {
-    public class UserService : IService
+    public class UserService : IService<List<User>>
     {
         private List<User> _users;
 
         public UserService()
         {
-            _users = new List<User>();
+            _users = Download();
+            if(_users.Count == 0)
+            {
+                GenerateDefaultAdmin();
+            }
         }
 
         public void AddUser(string login, string password, UserType userType)
         {
-            _users.Add(new User(login, password, userType));
+            _users.Add(new User(login, password, userType, MainService.GetIdGeneratorService().GetNextId()));
         }
 
         public void RemoveUser(User user)
@@ -33,14 +37,24 @@ namespace TaxiBusiness
             }
         }
 
-        public void Download()
+        public User? FindUser(string login, string password)
         {
-            throw new NotImplementedException();
+            return _users.FirstOrDefault(user => user.Login.Equals(login) && user.Password.Equals(password));
+        }
+
+        public List<User> Download()
+        {
+            return MainService.GetJsonStorage().GetUsers() ?? new List<User>();
         }
 
         public void Upload()
         {
-            throw new NotImplementedException();
+            MainService.GetJsonStorage().Save(_users);
+        }
+
+        private void GenerateDefaultAdmin()
+        {
+            AddUser("root", "root", UserType.Admin);
         }
     }
 }

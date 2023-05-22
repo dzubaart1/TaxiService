@@ -13,3 +13,5 @@ C:\Users\Dzubaart\Documents\GitHub\TaxiService\TaxiData\obj\Debug\net6.0\refint\
 C:\Users\Dzubaart\Documents\GitHub\TaxiService\TaxiData\obj\Debug\net6.0\TaxiData.pdb
 C:\Users\Dzubaart\Documents\GitHub\TaxiService\TaxiData\obj\Debug\net6.0\TaxiData.genruntimeconfig.cache
 C:\Users\Dzubaart\Documents\GitHub\TaxiService\TaxiData\obj\Debug\net6.0\ref\TaxiData.dll
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\TaxiData\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Dzubaart\Documents\GitHub\TaxiService\TaxiData\obj\Debug\net6.0\TaxiData.csproj.CopyComplete

@@ -1,17 +1,16 @@
 ﻿using TaxiData.Models;
-using TaxiData.Tools;
 
 namespace TaxiData.Entities
 {
     public class User
     {
-        public User(string login, string password, UserType userType)
+        public User(string login, string password, UserType userType, int id)
         {
             Login = login;
             Password = password;
-            Id = IdGenerator.GenerateId();
             Status = Status.Hired;
             UserType = userType;
+            Id = id;
         }
         public int Id { get; private set; }
         public string Login { get; private set; }
@@ -27,4 +26,3 @@ namespace TaxiData.Entities
     }
 }
 
-    

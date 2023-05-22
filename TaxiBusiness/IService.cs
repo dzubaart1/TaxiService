@@ -1,8 +1,8 @@
 ﻿namespace TaxiBusiness
 {
-    public interface IService
+    public interface IService<T>
     {
         public void Upload();
-        public void Download();
+        public T Download();
     }
 }

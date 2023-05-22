@@ -4,15 +4,15 @@ namespace TaxiData.Entities
 {
     public class Admin : User
     {
-        public Admin(string login, string password) : base(login, password, UserType.Admin)
+        public Admin(string login, string password, int id) : base(login, password, UserType.Admin, id)
         {
         }
-            
+
         //public User AddUser(string login, string password)
         //{
         //    return new User(login, password);
         //}
-        
+
         //public User RemoveUser(User user)
         //{
         //    return user;

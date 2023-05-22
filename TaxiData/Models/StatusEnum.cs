@@ -1,8 +1,8 @@
 ﻿namespace TaxiData.Models
 {
-     public enum Status
-     {
-         Hired,
-         Fired
-     }
+    public enum Status
+    {
+        Hired,
+        Fired
+    }
 }

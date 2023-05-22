@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Diagnostics;
 using System.Text;
 using TaxiData.Entities;
 using TaxiData.Tools;
@@ -13,6 +14,7 @@ namespace TaxiData
         public JsonStorage()
         {
             _jsonPath = AppDomain.CurrentDomain.BaseDirectory + $"{Path.DirectorySeparatorChar}data";
+
             if (!Directory.Exists(_jsonPath))
             {
                 Directory.CreateDirectory(_jsonPath);
@@ -46,10 +48,10 @@ namespace TaxiData
             JsonSave(json, _usersPath);
         }
 
-        public User[]? GetUsers()
+        public List<User>? GetUsers()
         {
             using var sr = new StreamReader(_usersPath, Encoding.UTF8);
-            return JsonConvert.DeserializeObject<User[]>(sr.ReadToEnd());
+            return JsonConvert.DeserializeObject<List<User>>(sr.ReadToEnd());
         }
 
         public IdGenerator? GetIdGenerator()
