@@ -74,19 +74,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dzubaart\\.nuget\\packages\\": {}
+    "C:\\Users\\HYPERPC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dzubaart\\Documents\\GitHub\\TaxiService\\TaxiBusiness\\TaxiBusiness.csproj",
+      "projectUniqueName": "C:\\Users\\HYPERPC\\Documents\\GitHub\\TaxiService\\TaxiBusiness\\TaxiBusiness.csproj",
       "projectName": "TaxiBusiness",
-      "projectPath": "C:\\Users\\Dzubaart\\Documents\\GitHub\\TaxiService\\TaxiBusiness\\TaxiBusiness.csproj",
-      "packagesPath": "C:\\Users\\Dzubaart\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dzubaart\\Documents\\GitHub\\TaxiService\\TaxiBusiness\\obj\\",
+      "projectPath": "C:\\Users\\HYPERPC\\Documents\\GitHub\\TaxiService\\TaxiBusiness\\TaxiBusiness.csproj",
+      "packagesPath": "C:\\Users\\HYPERPC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HYPERPC\\Documents\\GitHub\\TaxiService\\TaxiBusiness\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Dzubaart\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HYPERPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -100,8 +100,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Dzubaart\\Documents\\GitHub\\TaxiService\\TaxiData\\TaxiData.csproj": {
-              "projectPath": "C:\\Users\\Dzubaart\\Documents\\GitHub\\TaxiService\\TaxiData\\TaxiData.csproj"
+            "C:\\Users\\HYPERPC\\Documents\\GitHub\\TaxiService\\TaxiData\\TaxiData.csproj": {
+              "projectPath": "C:\\Users\\HYPERPC\\Documents\\GitHub\\TaxiService\\TaxiData\\TaxiData.csproj"
             }
           }
         }
@@ -137,7 +137,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
