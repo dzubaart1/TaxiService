@@ -1,7 +1,7 @@
 ﻿using TaxiData.Entities;
 using TaxiData.Models;
 
-namespace TaxiBusiness
+namespace TaxiBusiness.Services
 {
     public class UserService : IService<List<User>>
     {
@@ -10,7 +10,7 @@ namespace TaxiBusiness
         public UserService()
         {
             _users = Download();
-            if(_users.Count == 0)
+            if (_users.Count == 0)
             {
                 GenerateDefaultAdmin();
             }

@@ -1,4 +1,4 @@
-﻿namespace TaxiBusiness
+﻿namespace TaxiBusiness.Services
 {
     public interface IService<T>
     {

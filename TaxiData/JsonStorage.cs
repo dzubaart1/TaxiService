@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Text;
 using TaxiData.Entities;
-using TaxiData.Tools;
+using TaxiData.Models;
 
 namespace TaxiData
 {
@@ -19,24 +19,24 @@ namespace TaxiData
             {
                 Directory.CreateDirectory(_jsonPath);
             }
-
+            Debug.WriteLine(_jsonPath);
             _usersPath = $"{_jsonPath}{Path.DirectorySeparatorChar}users.json";
             _idFilePath = $"{_jsonPath}{Path.DirectorySeparatorChar}id.json";
 
             var usersFile = new FileInfo(_usersPath);
             if (!usersFile.Exists)
             {
-                usersFile.Create();
+                using FileStream fs = usersFile.Create();
             }
 
             var idFile = new FileInfo(_idFilePath);
             if (!idFile.Exists)
             {
-                idFile.Create();
+                using FileStream fs = idFile.Create();
             }
         }
 
-        public void Save(IdGenerator? generator)
+        public void Save(IdGenerator generator)
         {
             string json = JsonConvert.SerializeObject(generator);
             JsonSave(json, _idFilePath);

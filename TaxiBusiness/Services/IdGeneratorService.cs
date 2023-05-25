@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TaxiData.Entities;
-using TaxiData.Tools;
+﻿using TaxiData.Models;
 
-namespace TaxiBusiness
+namespace TaxiBusiness.Services
 {
     public class IdGeneratorService : IService<IdGenerator>
     {

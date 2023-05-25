@@ -1,14 +1,14 @@
-﻿namespace WinFormsApp1
+﻿namespace TaxiClient
 {
-    partial class Form1
+    partial class AdminForm
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,8 +23,8 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -32,10 +32,8 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
             label2 = new Label();
-            LoginTextBox = new TextBox();
-            PasswordTextBox = new TextBox();
-            SignInBtn = new Button();
-            DebugLabel = new Label();
+            LoginText = new Label();
+            UserTypeText = new Label();
             flowLayoutPanel1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -46,7 +44,7 @@
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(914, 600);
+            flowLayoutPanel1.Size = new Size(800, 450);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -56,84 +54,60 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
             tableLayoutPanel1.Controls.Add(label2, 0, 1);
-            tableLayoutPanel1.Controls.Add(LoginTextBox, 1, 0);
-            tableLayoutPanel1.Controls.Add(PasswordTextBox, 1, 1);
-            tableLayoutPanel1.Controls.Add(SignInBtn, 0, 2);
-            tableLayoutPanel1.Controls.Add(DebugLabel, 1, 2);
+            tableLayoutPanel1.Controls.Add(LoginText, 1, 0);
+            tableLayoutPanel1.Controls.Add(UserTypeText, 1, 1);
             tableLayoutPanel1.Location = new Point(3, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 3;
+            tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.Size = new Size(250, 125);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Dock = DockStyle.Fill;
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(119, 33);
+            label1.Size = new Size(52, 20);
             label1.TabIndex = 0;
-            label1.Text = "Login";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
+            label1.Text = "Логин";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Dock = DockStyle.Fill;
-            label2.Location = new Point(3, 33);
+            label2.Location = new Point(3, 20);
             label2.Name = "label2";
-            label2.Size = new Size(119, 33);
+            label2.Size = new Size(42, 20);
             label2.TabIndex = 1;
-            label2.Text = "Password";
-            label2.TextAlign = ContentAlignment.MiddleLeft;
+            label2.Text = "Роль";
             // 
-            // LoginTextBox
+            // LoginText
             // 
-            LoginTextBox.Location = new Point(128, 3);
-            LoginTextBox.Name = "LoginTextBox";
-            LoginTextBox.Size = new Size(119, 27);
-            LoginTextBox.TabIndex = 2;
+            LoginText.AutoSize = true;
+            LoginText.Location = new Point(128, 0);
+            LoginText.Name = "LoginText";
+            LoginText.Size = new Size(73, 20);
+            LoginText.TabIndex = 2;
+            LoginText.Text = "LoginText";
             // 
-            // PasswordTextBox
+            // UserTypeText
             // 
-            PasswordTextBox.Location = new Point(128, 36);
-            PasswordTextBox.Name = "PasswordTextBox";
-            PasswordTextBox.Size = new Size(119, 27);
-            PasswordTextBox.TabIndex = 3;
+            UserTypeText.AutoSize = true;
+            UserTypeText.Location = new Point(128, 20);
+            UserTypeText.Name = "UserTypeText";
+            UserTypeText.Size = new Size(96, 20);
+            UserTypeText.TabIndex = 3;
+            UserTypeText.Text = "UserTypeText";
             // 
-            // SignInBtn
-            // 
-            SignInBtn.Location = new Point(3, 69);
-            SignInBtn.Name = "SignInBtn";
-            SignInBtn.Size = new Size(94, 29);
-            SignInBtn.TabIndex = 4;
-            SignInBtn.Text = "Sign In";
-            SignInBtn.UseVisualStyleBackColor = true;
-            SignInBtn.Click += SignInBtn_Click;
-            // 
-            // DebugLabel
-            // 
-            DebugLabel.AutoSize = true;
-            DebugLabel.Dock = DockStyle.Fill;
-            DebugLabel.Location = new Point(128, 66);
-            DebugLabel.Name = "DebugLabel";
-            DebugLabel.Size = new Size(119, 59);
-            DebugLabel.TabIndex = 5;
-            DebugLabel.Text = "DebugText";
-            // 
-            // Form1
+            // AdminForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(800, 450);
             Controls.Add(flowLayoutPanel1);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "AdminForm";
+            Text = "AdminForm";
             flowLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
@@ -146,9 +120,7 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
         private Label label2;
-        private TextBox LoginTextBox;
-        private TextBox PasswordTextBox;
-        private Button SignInBtn;
-        private Label DebugLabel;
+        private Label LoginText;
+        private Label UserTypeText;
     }
 }

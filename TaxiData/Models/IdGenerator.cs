@@ -1,8 +1,8 @@
-﻿namespace TaxiData.Tools
+﻿namespace TaxiData.Models
 {
     public class IdGenerator
     {
-        public int CurrentId{ get; private set; }
+        public int CurrentId;
 
         public int GenerateId()
         {

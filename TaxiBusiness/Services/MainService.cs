@@ -1,6 +1,6 @@
 ﻿using TaxiData;
 
-namespace TaxiBusiness
+namespace TaxiBusiness.Services
 {
     public static class MainService
     {

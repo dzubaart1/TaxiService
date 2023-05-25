@@ -1,18 +1,19 @@
 ﻿using TaxiData.Entities;
 
-namespace TaxiBusiness
+namespace TaxiBusiness.Services
 {
     public class OrderService : IService<User>
     {
+        public User Download()
+        {
+            //throw new NotImplementedException();
+            return null;
+        }
+
         public void Upload()
         {
             //throw new NotImplementedException();
         }
 
-        User IService<User>.Download()
-        {
-            //throw new NotImplementedException();
-            return null;
-        }
     }
 }

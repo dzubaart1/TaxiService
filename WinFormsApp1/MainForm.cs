@@ -1,16 +1,20 @@
-using TaxiBusiness;
+using TaxiBusiness.Services;
+using TaxiClient;
+using TaxiClient.FormCntrls;
 using TaxiData;
 
 namespace WinFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        private MainFormCntrl _mainFormCntrl;
+        public MainForm()
         {
             InitializeComponent();
             MainService.Upload();
 
             Application.ApplicationExit += new EventHandler(OnApplicationExit);
+            _mainFormCntrl = new MainFormCntrl();
         }
 
         private void SignInBtn_Click(object sender, EventArgs e)
@@ -18,15 +22,16 @@ namespace WinFormsApp1
             string loginText = LoginTextBox.Text;
             string passwordText = PasswordTextBox.Text;
 
-            var res = MainService.GetUserService().FindUser(loginText, passwordText);
-            if (res != null)
-            {
-                DebugLabel.Text = $"Find User {res.Id}";
-            }
-            else
+            var res = _mainFormCntrl.Authentication(loginText, passwordText);
+
+            if (res is null)
             {
                 DebugLabel.Text = "Nothing!!!";
+                return;
             }
+
+            this.Hide();
+            _mainFormCntrl.Authorization(res);
         }
 
         private void OnApplicationExit(object sender, EventArgs e)
