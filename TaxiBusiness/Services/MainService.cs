@@ -31,5 +31,20 @@ namespace TaxiBusiness.Services
             GetOrderService().Upload();
             GetIdGeneratorService().Upload();
         }
+
+        public static string GetJsonPath()
+        {
+            return _jsonStorage.GetJsonPath();
+        }
+
+        public static string GetUserPath()
+        {
+            return _jsonStorage.GetUserPath();
+        }
+
+        public static string GetIdFilePath()
+        {
+            return _jsonStorage.GetIdFilePath();
+        }
     }
 }

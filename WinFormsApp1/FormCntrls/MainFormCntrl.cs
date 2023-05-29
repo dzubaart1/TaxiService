@@ -19,6 +19,8 @@ namespace TaxiClient.FormCntrls
                     adminForm.Show();
                     break;
                 case UserType.Dispatcher:
+                    DispatcherForm dispatcherForm = new DispatcherForm(user);
+                    dispatcherForm.Show();
                     break;
                 default:
                     break;

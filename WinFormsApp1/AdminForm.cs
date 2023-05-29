@@ -14,5 +14,10 @@ namespace TaxiClient
             LoginText.Text = adminFormCntrl.GetLogin();
             UserTypeText.Text = adminFormCntrl.GetUserType();
         }
+
+        private void AddUserBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

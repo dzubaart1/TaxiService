@@ -67,5 +67,19 @@ namespace TaxiData
             streamWriter.Close();
         }
 
+        public string GetJsonPath()
+        {
+            return _jsonPath;
+        }
+
+        public string GetUserPath()
+        {
+            return _usersPath;
+        }
+
+        public string GetIdFilePath()
+        {
+            return _idFilePath;
+        }
     }
 }
