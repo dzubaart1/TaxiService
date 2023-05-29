@@ -15,6 +15,7 @@ namespace TaxiBusiness.Services
                 GenerateDefaultAdmin();
             }
         }
+        public IReadOnlyCollection<User> Users => _users;
 
         public void AddUser(string login, string password, UserType userType)
         {

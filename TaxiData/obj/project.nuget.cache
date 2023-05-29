@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Oa8awlywSR+RJ3ZLO7tVFbhIjXxqJ7J+ZtSAf6GWqI7H71uinAMKUWk5UaXRbbPmlEj9KzQqw/qq1rb4FhDktQ==",
+  "dgSpecHash": "cx9RFQoKFnLpvoAYXtMiKl+DEIbikKvKRLNW0vkJ1+C6MLYWqkVI0VP2nIULultFY761w5NyjdPvTwyNY+I96A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HYPERPC\\Documents\\GitHub\\TaxiService\\TaxiData\\TaxiData.csproj",
+  "projectFilePath": "C:\\Users\\Dzubaart\\Documents\\GitHub\\TaxiService\\TaxiData\\TaxiData.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\HYPERPC\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Dzubaart\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
