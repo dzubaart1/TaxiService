@@ -1,17 +1,17 @@
 using TaxiBusiness.Services;
-using Xunit;
+using TaxiData.Entities;
 
 namespace Taxi.Test
 {
     public class Tests
     {
-        [Fact]
-        public void UploadWithoutFiles_CreatedNewFiles()
+        [Test]
+        public void AddUser_UserAdded()
         {
-            MainService.Upload();
-            Assert.That(MainService.GetJsonPath(), Is.EqualTo("C:\\Users\\HYPERPC\\Documents\\GitHub\\TaxiService\\WinFormsApp1\\bin\\Debug\\net6.0-windows\\data"));
-            Assert.That(MainService.GetIdFilePath(), Is.EqualTo("\"C:\\Users\\HYPERPC\\Documents\\GitHub\\TaxiService\\WinFormsApp1\\bin\\Debug\\net6.0-windows\\data\\id.json\""));
-            Assert.That(MainService.GetUserPath(), Is.EqualTo("\"C:\\Users\\HYPERPC\\Documents\\GitHub\\TaxiService\\WinFormsApp1\\bin\\Debug\\net6.0-windows\\data\\users.json\""));
+            UserService userService = new UserService();
+            userService.AddUser("321", "123", TaxiData.Models.UserType.Admin);
+            User user1 = new User("321", "123", TaxiData.Models.UserType.Admin, 2);
+            Assert.IsTrue(userService.CheckUser(user1));
         }
     }
 }

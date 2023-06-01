@@ -36,7 +36,7 @@ namespace TaxiClient
             }
 
             UserType userType = UserType.Admin;
-            switch(userTypeStr)
+            switch (userTypeStr)
             {
                 case "Dispatcher":
                     userType = UserType.Dispatcher;
@@ -44,6 +44,13 @@ namespace TaxiClient
             }
 
             MainService.GetUserService().AddUser(login, password, userType);
+            AdminForm adminForm = new AdminForm(_currentUser);
+            adminForm.Show();
+            this.Hide();
+        }
+
+        private void AddNewUserForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
             AdminForm adminForm = new AdminForm(_currentUser);
             adminForm.Show();
             this.Hide();

@@ -57,5 +57,10 @@ namespace TaxiBusiness.Services
         {
             AddUser("root", "root", UserType.Admin);
         }
+
+        public bool CheckUser(User user)
+        {
+            return _users.Contains(user);
+        }
     }
 }

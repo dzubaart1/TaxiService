@@ -17,7 +17,6 @@ namespace TaxiClient
 
             LoginText.Text = adminFormCntrl.GetLogin();
             UserTypeText.Text = adminFormCntrl.GetUserType();
-            FormClosing += OnFormClose;
 
             UpdateUserListView();
         }
@@ -38,11 +37,18 @@ namespace TaxiClient
             }
         }
 
-        private void OnFormClose(object sender, EventArgs e)
+        private void AdminForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             MainForm mainForm = new MainForm();
             mainForm.Show();
-            this.Close();
+            this.Hide();
+        }
+
+        private void RemoveUserBtn_Click(object sender, EventArgs e)
+        {
+            RemoveUserForm removeUserForm = new RemoveUserForm(_currentUser);
+            removeUserForm.Show();
+            this.Hide();
         }
     }
 }

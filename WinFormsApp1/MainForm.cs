@@ -11,7 +11,6 @@ namespace WinFormsApp1
             InitializeComponent();
             MainService.Upload();
 
-            FormClosing += OnFormClose;
             _mainFormCntrl = new MainFormCntrl();
         }
 
@@ -32,7 +31,7 @@ namespace WinFormsApp1
             _mainFormCntrl.Authorization(res);
         }
 
-        private void OnFormClose(object sender, EventArgs e)
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             MainService.Upload();
             Application.Exit();
