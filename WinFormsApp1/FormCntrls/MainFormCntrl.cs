@@ -1,6 +1,7 @@
 ﻿using TaxiBusiness.Services;
 using TaxiData.Entities;
 using TaxiData.Models;
+using WinFormsApp1;
 
 namespace TaxiClient.FormCntrls
 {
@@ -10,12 +11,12 @@ namespace TaxiClient.FormCntrls
         {
             return MainService.GetUserService().FindUser(login, password);
         }
-        public void Authorization(User user)
+        public void Authorization(User user, MainForm mainForm)
         {
             switch (user.UserType)
             {
                 case UserType.Admin:
-                    AdminForm adminForm = new AdminForm(user);
+                    AdminForm adminForm = new AdminForm(user, mainForm);
                     adminForm.Show();
                     break;
                 case UserType.Dispatcher:

@@ -27,8 +27,8 @@ namespace WinFormsApp1
                 return;
             }
 
-            this.Hide();
-            _mainFormCntrl.Authorization(res);
+            Hide();
+            _mainFormCntrl.Authorization(res,this);
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)

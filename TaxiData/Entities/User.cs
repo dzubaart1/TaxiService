@@ -18,10 +18,11 @@ namespace TaxiData.Entities
         public Status Status { get; private set; }
         public UserType UserType { get; private set; }
 
-        public void EditUser(string login, string password)
+        public void EditUser(string login, string password, UserType userType)
         {
             Login = login;
             Password = password;
+            UserType = userType;
         }
     }
 }

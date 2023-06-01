@@ -27,13 +27,13 @@ namespace TaxiBusiness.Services
             _users.Remove(user);
         }
 
-        public void EditUser(int id, string login, string password)
+        public void EditUser(int id, string login, string password, UserType userType)
         {
             foreach (User user in _users)
             {
                 if (user.Id == id)
                 {
-                    user.EditUser(login, password);
+                    user.EditUser(login, password,userType);
                 }
             }
         }
@@ -41,6 +41,16 @@ namespace TaxiBusiness.Services
         public User? FindUser(string login, string password)
         {
             return _users.FirstOrDefault(user => user.Login.Equals(login) && user.Password.Equals(password));
+        }
+
+        public User GetUser(int id)
+        {
+            var res = _users.FirstOrDefault(user => user.Id.Equals(id));
+            if (res is null)
+            {
+                throw new ArgumentException("There is not id in the database");
+            }
+            return res;
         }
 
         public List<User> Download()
@@ -56,11 +66,6 @@ namespace TaxiBusiness.Services
         private void GenerateDefaultAdmin()
         {
             AddUser("root", "root", UserType.Admin);
-        }
-
-        public bool CheckUser(User user)
-        {
-            return _users.Contains(user);
         }
     }
 }
