@@ -29,12 +29,15 @@ namespace TaxiBusiness.Services
 
         public void EditUser(int id, string login, string password, UserType userType)
         {
-            foreach (User user in _users)
+            var targetUser = _users.Find(user => user.Id == id);
+
+            if(targetUser is not null)
             {
-                if (user.Id == id)
-                {
-                    user.EditUser(login, password,userType);
-                }
+                targetUser.EditUser(login, password, userType);
+            }
+            else
+            {
+                throw new ArgumentException($"[-] There is not user with id {id}");
             }
         }
 
@@ -45,10 +48,10 @@ namespace TaxiBusiness.Services
 
         public User GetUser(int id)
         {
-            var res = _users.FirstOrDefault(user => user.Id.Equals(id));
+            var res = _users.Find(user => user.Id.Equals(id));
             if (res is null)
             {
-                throw new ArgumentException("There is not id in the database");
+                throw new ArgumentException("[-] There is not id in the database");
             }
             return res;
         }

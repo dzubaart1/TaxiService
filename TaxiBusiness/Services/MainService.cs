@@ -8,7 +8,8 @@ namespace TaxiBusiness.Services
         private static OrderService? _orderService;
         private static IdGeneratorService? _idGeneratorService;
         private static JsonStorage? _jsonStorage;
-
+        private static DriverService? _driverService;
+        private static CarService? _carService;
         public static UserService GetUserService()
         {
             return _userService ??= new UserService();
@@ -25,26 +26,21 @@ namespace TaxiBusiness.Services
         {
             return _jsonStorage ??= new JsonStorage();
         }
+        public static DriverService GetDriverService()
+        {
+            return _driverService ??= new DriverService();
+        }
+        public static CarService GetCarService()
+        {
+            return _carService ??= new CarService();
+        }
         public static void Upload()
         {
             GetUserService().Upload();
             GetOrderService().Upload();
             GetIdGeneratorService().Upload();
-        }
-
-        public static string GetJsonPath()
-        {
-            return _jsonStorage.GetJsonPath();
-        }
-
-        public static string GetUserPath()
-        {
-            return _jsonStorage.GetUserPath();
-        }
-
-        public static string GetIdFilePath()
-        {
-            return _jsonStorage.GetIdFilePath();
+            GetDriverService().Upload();
+            GetCarService().Upload();
         }
     }
 }
