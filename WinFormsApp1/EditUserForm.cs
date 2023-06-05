@@ -48,6 +48,8 @@ namespace TaxiClient
 
         private void EditUserForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            _adminForm.ClearUserList();
+            _adminForm.UpdateUserListView();
             _adminForm.Show();
         }
 

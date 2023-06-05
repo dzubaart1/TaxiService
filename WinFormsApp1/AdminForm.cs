@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using TaxiBusiness.Services;
+﻿using TaxiBusiness.Services;
 using TaxiClient.FormCntrls;
 using TaxiData.Entities;
 using WinFormsApp1;
@@ -29,7 +28,7 @@ namespace TaxiClient
             addNewUserForm.Show();
             Close();
         }
-        private void UpdateUserListView()
+        public void UpdateUserListView()
         {
             foreach (var user in MainService.GetUserService().Users)
             {
@@ -50,15 +49,20 @@ namespace TaxiClient
         }
         private void UserListView_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(UserListView.SelectedItems.Count == 0)
+            if (UserListView.SelectedItems.Count == 0)
             {
                 return;
             }
-            
+
             User selectedUser = MainService.GetUserService().GetUser(int.Parse(UserListView.SelectedItems[0].Text));
             EditUserForm editUserForm = new EditUserForm(selectedUser, this);
             editUserForm.Show();
             Hide();
+        }
+
+        public void ClearUserList()
+        {
+            UserListView.Items.Clear();
         }
     }
 }
