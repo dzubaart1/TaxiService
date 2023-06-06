@@ -1,24 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using TaxiBusiness.Services;
+﻿using TaxiBusiness.Services;
 using TaxiData.Entities;
 using TaxiData.Models;
-using WinFormsApp1;
 
 namespace TaxiClient
 {
     public partial class EditUserForm : Form
     {
         private User _currentUser;
-        private AdminForm _adminForm;
-        public EditUserForm(User user, AdminForm adminForm)
+        private UserServiceForm _userServiceForm;
+        public EditUserForm(User user, UserServiceForm userServiceForm)
         {
             InitializeComponent();
             _currentUser = user;
@@ -28,7 +18,7 @@ namespace TaxiClient
             UserTypeComboBox.Items.AddRange(new string[] { "Admin", "Dispatcher" });
             UserTypeComboBox.SelectedIndex = (int)user.Status;
 
-            _adminForm = adminForm;
+            _userServiceForm = userServiceForm;
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)
@@ -42,19 +32,19 @@ namespace TaxiClient
                     break;
             }
             MainService.GetUserService().EditUser(_currentUser.Id, LoginTextBox.Text, PasswordTextBox.Text, userType);
-            _adminForm.Show();
+            _userServiceForm.Show();
             Close();
         }
 
         private void EditUserForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            _adminForm.Show();
+            _userServiceForm.Show();
         }
 
         private void RemoveBtn_Click(object sender, EventArgs e)
         {
             MainService.GetUserService().RemoveUser(_currentUser);
-            _adminForm.Show();
+            _userServiceForm.Show();
             Close();
         }
     }

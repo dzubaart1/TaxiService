@@ -19,5 +19,8 @@
     <Compile Update="RemoveUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UserServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

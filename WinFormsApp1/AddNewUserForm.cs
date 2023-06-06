@@ -7,13 +7,11 @@ namespace TaxiClient
 {
     public partial class AddNewUserForm : Form
     {
-        private User _currentUser;
-        private AdminForm _adminForm;
-        public AddNewUserForm(User user, AdminForm adminForm)
+        private UserServiceForm _userServiceForm;
+        public AddNewUserForm(UserServiceForm userServiceForm)
         {
             InitializeComponent();
-            _adminForm = adminForm;
-            _currentUser = user;
+            _userServiceForm = userServiceForm;
             UserTypeComboBox.Items.AddRange(new string[] { "Admin", "Dispatcher" });
         }
 
@@ -47,13 +45,13 @@ namespace TaxiClient
             }
 
             MainService.GetUserService().AddUser(login, password, userType);
-            _adminForm.Show();
+            _userServiceForm.Show();
             Close();
         }
 
         private void AddNewUserForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            _adminForm.Show();
+            _userServiceForm.Show();
         }
     }
 }

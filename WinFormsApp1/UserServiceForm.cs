@@ -1,33 +1,20 @@
 ﻿using TaxiBusiness.Services;
-using TaxiClient.FormCntrls;
 using TaxiData.Entities;
-using WinFormsApp1;
 
 namespace TaxiClient
 {
-    public partial class AdminForm : Form
+    public partial class UserServiceForm : Form
     {
-        private User _currentUser;
-        private MainForm _mainForm;
-        public AdminForm(User user, MainForm mainForm)
+        private AdminForm _adminForm;
+        public UserServiceForm(AdminForm adminForm)
         {
             InitializeComponent();
 
-            AdminFormCntrl adminFormCntrl = new AdminFormCntrl(user);
-            _currentUser = user;
-            _mainForm = mainForm;
-
-            LoginText.Text = adminFormCntrl.GetLogin();
-            UserTypeText.Text = adminFormCntrl.GetUserType();
+            _adminForm = adminForm;
 
             UpdateUserListView();
         }
-        private void AddUserBtn_Click(object sender, EventArgs e)
-        {
-            AddNewUserForm addNewUserForm = new AddNewUserForm(this);
-            addNewUserForm.Show();
-            Hide();
-        }
+
         private void UpdateUserListView()
         {
             foreach (var user in MainService.GetUserService().Users)
@@ -37,9 +24,17 @@ namespace TaxiClient
                 UserListView.Items.Add(item);
             }
         }
-        private void AdminForm_FormClosing(object sender, FormClosingEventArgs e)
+
+        private void AddUserBtn_Click(object sender, EventArgs e)
         {
-            _mainForm.Show();
+            AddNewUserForm addNewUserForm = new AddNewUserForm(this);
+            addNewUserForm.Show();
+            Hide();
+        }
+
+        private void UserServiceForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _adminForm.Show();
         }
 
         private void UserListView_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,8 +50,7 @@ namespace TaxiClient
             Hide();
         }
 
-
-        private void AdminForm_Activated(object sender, EventArgs e)
+        private void UserServiceForm_Activated(object sender, EventArgs e)
         {
             UserListView.Items.Clear();
             UpdateUserListView();
