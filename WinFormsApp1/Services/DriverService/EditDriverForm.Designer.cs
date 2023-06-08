@@ -31,9 +31,7 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
-            label2 = new Label();
             NameTextBox = new TextBox();
-            IDTextBox = new TextBox();
             SaveBtn = new Button();
             RemoveBtn = new Button();
             flowLayoutPanel1.SuspendLayout();
@@ -57,18 +55,16 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
-            tableLayoutPanel1.Controls.Add(label2, 0, 1);
             tableLayoutPanel1.Controls.Add(NameTextBox, 1, 0);
-            tableLayoutPanel1.Controls.Add(IDTextBox, 1, 1);
-            tableLayoutPanel1.Controls.Add(SaveBtn, 0, 2);
-            tableLayoutPanel1.Controls.Add(RemoveBtn, 1, 2);
+            tableLayoutPanel1.Controls.Add(SaveBtn, 0, 1);
+            tableLayoutPanel1.Controls.Add(RemoveBtn, 1, 1);
             tableLayoutPanel1.Location = new Point(3, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 3;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 78F));
-            tableLayoutPanel1.Size = new Size(212, 136);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Size = new Size(212, 107);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -80,15 +76,6 @@
             label1.TabIndex = 0;
             label1.Text = "Name";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(3, 29);
-            label2.Name = "label2";
-            label2.Size = new Size(18, 15);
-            label2.TabIndex = 1;
-            label2.Text = "ID";
-            // 
             // NameTextBox
             // 
             NameTextBox.Location = new Point(109, 3);
@@ -96,16 +83,9 @@
             NameTextBox.Size = new Size(100, 23);
             NameTextBox.TabIndex = 2;
             // 
-            // IDTextBox
-            // 
-            IDTextBox.Location = new Point(109, 32);
-            IDTextBox.Name = "IDTextBox";
-            IDTextBox.Size = new Size(100, 23);
-            IDTextBox.TabIndex = 3;
-            // 
             // SaveBtn
             // 
-            SaveBtn.Location = new Point(3, 61);
+            SaveBtn.Location = new Point(3, 32);
             SaveBtn.Name = "SaveBtn";
             SaveBtn.Size = new Size(75, 23);
             SaveBtn.TabIndex = 4;
@@ -115,7 +95,7 @@
             // 
             // RemoveBtn
             // 
-            RemoveBtn.Location = new Point(109, 61);
+            RemoveBtn.Location = new Point(109, 32);
             RemoveBtn.Name = "RemoveBtn";
             RemoveBtn.Size = new Size(75, 23);
             RemoveBtn.TabIndex = 5;
@@ -144,7 +124,6 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
-        private Label label2;
         private TextBox NameTextBox;
         private TextBox IDTextBox;
         private Button SaveBtn;

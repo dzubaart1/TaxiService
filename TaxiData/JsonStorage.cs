@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Diagnostics;
 using System.Text;
 using TaxiData.Entities;
 using TaxiData.Models;
@@ -20,6 +21,8 @@ namespace TaxiData
             {
                 Directory.CreateDirectory(_jsonPath);
             }
+
+            Debug.WriteLine(_jsonPath);
 
             _usersPath = $"{_jsonPath}{Path.DirectorySeparatorChar}users.json";
             _idPath = $"{_jsonPath}{Path.DirectorySeparatorChar}id.json";

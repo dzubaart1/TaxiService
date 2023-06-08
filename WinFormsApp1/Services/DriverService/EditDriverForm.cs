@@ -12,11 +12,13 @@ namespace TaxiClient
             InitializeComponent();
             _currentDriver = driver;
             _driverServiceForm = driverServiceForm;
+
+            NameTextBox.Text = _currentDriver.RegistrationCard.Name;
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            MainService.GetDriverService().Edit(int.Parse(IDTextBox.Text), NameTextBox.Text);
+            MainService.GetDriverService().Edit(_currentDriver.Id, NameTextBox.Text, _currentDriver.RegistrationCard.Id);
             _driverServiceForm.Show();
             Close();
         }

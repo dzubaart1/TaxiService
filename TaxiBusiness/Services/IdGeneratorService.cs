@@ -11,10 +11,20 @@ namespace TaxiBusiness.Services
             _idGenerator = Download();
         }
 
-        public int GetNextId()
+        public int GetNextUserId()
         {
-            return _idGenerator.GenerateId();
+            return _idGenerator.GenerateUserId();
         }
+
+        public int GetNextCarId()
+        {
+            return _idGenerator.GenerateCarId();
+        }
+        public int GetNextDriverId()
+        {
+            return _idGenerator.GenerateDriverId();
+        }
+
 
         public IdGenerator Download()
         {

@@ -2,11 +2,24 @@
 {
     public class IdGenerator
     {
-        public int CurrentId;
+        public int CurrentUserId;
+        public int CurrentCarId;
+        public int CurrentDriverId;
 
-        public int GenerateId()
+        public int GenerateUserId()
         {
-            return ++CurrentId;
+            return ++CurrentUserId;
         }
+
+        public int GenerateCarId()
+        {
+            return ++CurrentCarId;
+        }
+
+        public int GenerateDriverId()
+        {
+            return ++CurrentDriverId;
+        }
+
     }
 }

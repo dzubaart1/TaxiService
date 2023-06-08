@@ -4,18 +4,35 @@ namespace TaxiData.Models
 {
     public class Car
     {
-        private Color _color;
-        private string _model;
-        private VIN _vin;
+        public int Id { get; private set; }
+        public Color Color { get; private set; }
+        public string Model { get; private set; }
+        public VIN Vin { get; private set; }
 
-        public Car(Color color, string model, string vin)
+        public Car(Color color, string model, string vin, int id)
         {
-            _color = color;
-            _model = model;
-            _vin = new VIN(vin);
+            Color = color;
+            Model = model;
+            Id = id;
+            Vin = new VIN(vin);
         }
 
-        private class VIN
+        public void SetModel(string model)
+        {
+            Model = model;
+        }
+
+        public void SetColor(Color color)
+        {
+            Color = color;
+        }
+
+        public void SetVin(string vin)
+        {
+            Vin = new VIN(vin);
+        }
+
+        public class VIN
         {
             public string Value { get; private set;}
 
@@ -39,6 +56,11 @@ namespace TaxiData.Models
                 {
                     throw new ArgumentException("[-] Invalid VIN");
                 }
+            }
+
+            public override string ToString()
+            {
+                return Value;
             }
 
         }

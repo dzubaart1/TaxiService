@@ -38,6 +38,7 @@
             UserServiceBtn = new Button();
             DriverServiceBtn = new Button();
             tableLayoutPanel2 = new TableLayoutPanel();
+            CarServiceBtn = new Button();
             flowLayoutPanel1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
@@ -114,6 +115,7 @@
             // 
             flowLayoutPanel2.Controls.Add(UserServiceBtn);
             flowLayoutPanel2.Controls.Add(DriverServiceBtn);
+            flowLayoutPanel2.Controls.Add(CarServiceBtn);
             flowLayoutPanel2.Dock = DockStyle.Fill;
             flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel2.Location = new Point(3, 101);
@@ -156,6 +158,16 @@
             tableLayoutPanel2.Size = new Size(700, 338);
             tableLayoutPanel2.TabIndex = 1;
             // 
+            // CarServiceBtn
+            // 
+            CarServiceBtn.Location = new Point(3, 61);
+            CarServiceBtn.Name = "CarServiceBtn";
+            CarServiceBtn.Size = new Size(105, 23);
+            CarServiceBtn.TabIndex = 2;
+            CarServiceBtn.Text = "Car Service";
+            CarServiceBtn.UseVisualStyleBackColor = true;
+            CarServiceBtn.Click += CarServiceBtn_Click;
+            // 
             // AdminForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -186,5 +198,6 @@
         private TableLayoutPanel tableLayoutPanel2;
         private Button UserServiceBtn;
         private Button DriverServiceBtn;
+        private Button CarServiceBtn;
     }
 }

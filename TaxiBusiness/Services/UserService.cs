@@ -19,7 +19,7 @@ namespace TaxiBusiness.Services
 
         public void AddUser(string login, string password, UserType userType)
         {
-            _users.Add(new User(login, password, userType, MainService.GetIdGeneratorService().GetNextId()));
+            _users.Add(new User(login, password, userType, MainService.GetIdGeneratorService().GetNextUserId()));
         }
 
         public void RemoveUser(User user)

@@ -15,5 +15,10 @@
         {
             Name = name;
         }
+
+        public void SetId(int id)
+        {
+            Id = id;
+        }
     }
 }

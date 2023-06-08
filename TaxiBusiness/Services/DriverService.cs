@@ -1,4 +1,5 @@
-﻿using TaxiData.Models;
+﻿using System.Diagnostics;
+using TaxiData.Models;
 
 namespace TaxiBusiness.Services
 {
@@ -22,24 +23,10 @@ namespace TaxiBusiness.Services
             MainService.GetJsonStorage().Save(_drivers);
         }
 
-        public void Add(string name, int id)
+        public void Add(string name, int regCardid)
         {
-            RegistrationCard regCard = new RegistrationCard(name, id);
-            _drivers.Add(new Driver(regCard));
-        }
-
-        public void Remove(int id)
-        {
-            Driver? targetDriver = _drivers.Find(driver => driver.RegistrationCard.Id.Equals(id));
-            
-            if(targetDriver != null)
-            {
-                _drivers.Remove(targetDriver);
-            }
-            else
-            {
-                throw new ArgumentException($"[-] There is not driver with id {id}");
-            }
+            RegistrationCard regCard = new RegistrationCard(name, regCardid);
+            _drivers.Add(new Driver(regCard, MainService.GetIdGeneratorService().GetNextDriverId()));
         }
 
         public void Remove(Driver driver)
@@ -47,13 +34,15 @@ namespace TaxiBusiness.Services
             _drivers.Remove(driver);
         }
 
-        public void Edit(int id, string name)
+        public void Edit(int id, string name, int regCardId)
         {
-            var targetDriver = _drivers.Find(driver => driver.RegistrationCard.Id == id); //
+            var targetDriver = _drivers.Find(driver => driver.Id == id);
+
 
             if (targetDriver is not null)
             {
                 targetDriver.RegistrationCard.SetName(name);
+                targetDriver.RegistrationCard.SetId(regCardId);
             }
             else
             {
@@ -63,7 +52,7 @@ namespace TaxiBusiness.Services
 
         public Driver GetDriver(int id)
         {
-            var res = _drivers.Find(driver => driver.RegistrationCard.Id.Equals(id));
+            var res = _drivers.Find(driver => driver.Id.Equals(id));
             if (res is null)
             {
                 throw new ArgumentException("[-] There is not id in the database");

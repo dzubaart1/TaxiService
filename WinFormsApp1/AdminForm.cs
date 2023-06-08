@@ -1,5 +1,5 @@
-﻿using TaxiBusiness.Services;
-using TaxiClient.FormCntrls;
+﻿using TaxiClient.FormCntrls;
+using TaxiClient.Services.CarService;
 using TaxiData.Entities;
 using WinFormsApp1;
 
@@ -35,6 +35,13 @@ namespace TaxiClient
         private void DriverServiceBtn_Click(object sender, EventArgs e)
         {
             DriverServiceForm driverServiceForm = new DriverServiceForm(this);
+            driverServiceForm.Show();
+            Hide();
+        }
+
+        private void CarServiceBtn_Click(object sender, EventArgs e)
+        {
+            CarServiceForm driverServiceForm = new CarServiceForm(this);
             driverServiceForm.Show();
             Hide();
         }
