@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TaxiData.Entities;
-using TaxiData.Models;
+﻿using TaxiData.Models;
 
 namespace TaxiBusiness.Services
 {
@@ -48,11 +42,16 @@ namespace TaxiBusiness.Services
             }
         }
 
+        public void Remove(Driver driver)
+        {
+            _drivers.Remove(driver);
+        }
+
         public void Edit(int id, string name)
         {
-            Driver? targetDriver = _drivers.Find(driver => driver.RegistrationCard.Id.Equals(id));
+            var targetDriver = _drivers.Find(driver => driver.RegistrationCard.Id == id); //
 
-            if (targetDriver != null)
+            if (targetDriver is not null)
             {
                 targetDriver.RegistrationCard.SetName(name);
             }
@@ -60,6 +59,16 @@ namespace TaxiBusiness.Services
             {
                 throw new ArgumentException($"[-] There is not driver with id {id}");
             }
+        }
+
+        public Driver GetDriver(int id)
+        {
+            var res = _drivers.Find(driver => driver.RegistrationCard.Id.Equals(id));
+            if (res is null)
+            {
+                throw new ArgumentException("[-] There is not id in the database");
+            }
+            return res;
         }
     }
 }

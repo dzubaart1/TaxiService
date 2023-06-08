@@ -2,8 +2,8 @@
 {
     public class Driver
     {
-        private Car _car;
-       
+        private Car? _car;
+
         public Driver(RegistrationCard registrationCard)
         {
             RegistrationCard = registrationCard;

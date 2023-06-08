@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="AddNewDriverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="AddNewUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -8,6 +11,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="DispatcherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DriverServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="EditDriverForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="EditUserForm.cs">
