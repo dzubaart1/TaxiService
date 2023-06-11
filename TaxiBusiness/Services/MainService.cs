@@ -10,6 +10,7 @@ namespace TaxiBusiness.Services
         private static JsonStorage? _jsonStorage;
         private static DriverService? _driverService;
         private static CarService? _carService;
+        private static ShiftService? _shiftService;
         public static UserService GetUserService()
         {
             return _userService ??= new UserService();
@@ -34,6 +35,10 @@ namespace TaxiBusiness.Services
         {
             return _carService ??= new CarService();
         }
+        public static ShiftService GetShiftService()
+        {
+            return _shiftService ??= new ShiftService();
+        }
         public static void Upload()
         {
             GetUserService().Upload();
@@ -41,6 +46,7 @@ namespace TaxiBusiness.Services
             GetIdGeneratorService().Upload();
             GetDriverService().Upload();
             GetCarService().Upload();
+            GetShiftService().Upload();
         }
     }
 }

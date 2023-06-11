@@ -46,6 +46,11 @@ namespace TaxiBusiness.Services
             return _users.FirstOrDefault(user => user.Login.Equals(login) && user.Password.Equals(password));
         }
 
+        public User? FindUser(string login)
+        {
+            return _users.FirstOrDefault(user => user.Login.Equals(login));
+        }
+
         public User GetUser(int id)
         {
             var res = _users.Find(user => user.Id.Equals(id));

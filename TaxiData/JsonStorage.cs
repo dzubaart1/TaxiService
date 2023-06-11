@@ -13,6 +13,7 @@ namespace TaxiData
         private string _idPath;
         private string _driversPath;
         private string _carsPath;
+        private string _shiftPath;
         public JsonStorage()
         {
             _jsonPath = AppDomain.CurrentDomain.BaseDirectory + $"{Path.DirectorySeparatorChar}data";
@@ -28,6 +29,7 @@ namespace TaxiData
             _idPath = $"{_jsonPath}{Path.DirectorySeparatorChar}id.json";
             _driversPath = $"{_jsonPath}{Path.DirectorySeparatorChar}drivers.json";
             _carsPath = $"{_jsonPath}{Path.DirectorySeparatorChar}cars.json";
+            _shiftPath = $"{_jsonPath}{Path.DirectorySeparatorChar}shift.json";
 
             var usersFile = new FileInfo(_usersPath);
             if (!usersFile.Exists)
@@ -51,6 +53,12 @@ namespace TaxiData
             if (!carsFile.Exists)
             {
                 using FileStream fs = carsFile.Create();
+            }
+
+            var shiftFile = new FileInfo(_shiftPath);
+            if (!shiftFile.Exists)
+            {
+                using FileStream fs = shiftFile.Create();
             }
         }
 
@@ -78,6 +86,12 @@ namespace TaxiData
             JsonSave(json, _usersPath);
         }
 
+        public void Save(Shift shift)
+        {
+            string json = JsonConvert.SerializeObject(shift);
+            JsonSave(json, _shiftPath);
+        }
+
         public List<User>? GetUsers()
         {
             using var sr = new StreamReader(_usersPath, Encoding.UTF8);
@@ -100,6 +114,12 @@ namespace TaxiData
         {
             using var sr = new StreamReader(_carsPath, Encoding.UTF8);
             return JsonConvert.DeserializeObject<List<Car>>(sr.ReadToEnd());
+        }
+
+        public Shift? GetShift()
+        {
+            using var sr = new StreamReader(_shiftPath, Encoding.UTF8);
+            return JsonConvert.DeserializeObject<Shift>(sr.ReadToEnd());
         }
 
         private void JsonSave(string json, string path)

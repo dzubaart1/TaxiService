@@ -1,4 +1,6 @@
-﻿using TaxiClient.FormCntrls;
+﻿using System.Reflection.Metadata.Ecma335;
+using TaxiBusiness.Services;
+using TaxiClient.FormCntrls;
 using TaxiClient.Services.CarService;
 using TaxiData.Entities;
 using WinFormsApp1;
@@ -44,6 +46,37 @@ namespace TaxiClient
             CarServiceForm driverServiceForm = new CarServiceForm(this);
             driverServiceForm.Show();
             Hide();
+        }
+
+        private void ShiftBtn_Click(object sender, EventArgs e)
+        {
+            ShiftForm shiftForm = new ShiftForm(this);
+            shiftForm.Show();
+            Hide();
+        }
+
+        private void AdminForm_Activated(object sender, EventArgs e)
+        {
+            DriverListView.Items.Clear();
+            UpdateShift();
+        }
+
+        private void UpdateShift()
+        {
+            if (MainService.GetShiftService().Shifts.Dispatcher == null)
+            {
+                return;
+            }
+            else
+            {
+                DispatcherLabel.Text = MainService.GetShiftService().Shifts.Dispatcher.Login.ToString();
+                foreach (var driver in MainService.GetShiftService().Shifts.DriverList)
+                {
+                    ListViewItem item = new ListViewItem(driver.RegistrationCard.Id.ToString());
+                    item.SubItems.Add(driver.RegistrationCard.Name);
+                    DriverListView.Items.Add(item);
+                }
+            }
         }
     }
 }

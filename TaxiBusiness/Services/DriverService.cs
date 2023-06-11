@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using TaxiData.Models;
+﻿using TaxiData.Models;
 
 namespace TaxiBusiness.Services
 {

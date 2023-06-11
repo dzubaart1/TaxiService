@@ -62,7 +62,6 @@ C:\Users\HYPERPC\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-wind
 C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.DispatcherForm.resources
 C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.AddNewUserForm.resources
 C:\Users\HYPERPC\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.AddNewUserForm.resources
-C:\Users\HYPERPC\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.RemoveUserForm.resources
 C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.EditUserForm.resources
 C:\Users\HYPERPC\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.EditUserForm.resources
 C:\Users\HYPERPC\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.UserServiceForm.resources
@@ -74,3 +73,5 @@ C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-win
 C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.EditDriverForm.resources
 C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.UserServiceForm.resources
 C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.Services.CarService.CarServiceForm.resources
+C:\Users\HYPERPC\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.Services.CarService.CarServiceForm.resources
+C:\Users\HYPERPC\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.ShiftForm.resources
