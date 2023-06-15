@@ -1,4 +1,6 @@
-﻿using TaxiBusiness.Services;
+﻿using System.Diagnostics;
+using TaxiBusiness.Services;
+using TaxiData.Entities;
 using TaxiData.Models;
 
 namespace TaxiClient
@@ -6,7 +8,6 @@ namespace TaxiClient
     public partial class ShiftForm : Form
     {
         private AdminForm _adminForm;
-        private List<Driver> driverList = new List<Driver>();
         public ShiftForm(AdminForm adminForm)
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace TaxiClient
         {
             foreach (var user in MainService.GetUserService().Users)
             {
-                if (user.UserType == TaxiData.Models.UserType.Dispatcher)
+                if (user.UserType == UserType.Dispatcher)
                 {
                     DispatcherComboBox.Items.Add(user.Login);
                 }
@@ -44,14 +45,23 @@ namespace TaxiClient
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            MainService.GetShiftService().ClearShift();
             var dispatcher = MainService.GetUserService().FindUser(DispatcherComboBox.Text);
+
+            if(dispatcher == null)
+            {
+                throw new ArgumentException($"[-] There is not that dispatcher {DispatcherComboBox.Text}");
+            }
+
+            var shift = new Shift();
+            shift.SetDispatcher(dispatcher);
+
             foreach (ListViewItem driver in DriversListView.SelectedItems)
             {
                 Driver selectedDriver = MainService.GetDriverService().GetDriver(int.Parse(driver.SubItems[0].Text));
-                driverList.Add(selectedDriver);
+                shift.AddDriver(selectedDriver);
             }
-            MainService.GetShiftService().Add(dispatcher, driverList);
+            
+            MainService.GetShiftService().Set(shift);
             _adminForm.Show();
             Close();
         }

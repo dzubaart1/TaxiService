@@ -56,25 +56,27 @@ namespace TaxiClient
 
         private void AdminForm_Activated(object sender, EventArgs e)
         {
-            DriverListView.Items.Clear();
             UpdateShift();
         }
 
         private void UpdateShift()
         {
-            if (MainService.GetShiftService().Shifts.Dispatcher == null)
+            DriverListView.Items.Clear();
+
+            var disp = MainService.GetShiftService().Shift.Dispatcher;
+            var driverList = MainService.GetShiftService().Shift.DriverList;
+
+            if(disp is null || driverList.Count == 0)
             {
                 return;
             }
-            else
+            DispatcherLabel.Text = disp.Login.ToString();
+
+            foreach (var driver in driverList)
             {
-                DispatcherLabel.Text = MainService.GetShiftService().Shifts.Dispatcher.Login.ToString();
-                foreach (var driver in MainService.GetShiftService().Shifts.DriverList)
-                {
-                    ListViewItem item = new ListViewItem(driver.RegistrationCard.Id.ToString());
-                    item.SubItems.Add(driver.RegistrationCard.Name);
-                    DriverListView.Items.Add(item);
-                }
+                ListViewItem item = new ListViewItem(driver.RegistrationCard.Id.ToString());
+                item.SubItems.Add(driver.RegistrationCard.Name);
+                DriverListView.Items.Add(item);
             }
         }
     }

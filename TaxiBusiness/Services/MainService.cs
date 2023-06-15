@@ -48,5 +48,15 @@ namespace TaxiBusiness.Services
             GetCarService().Upload();
             GetShiftService().Upload();
         }
+
+        public static void Download()
+        {
+            GetUserService().Download();
+            GetOrderService().Download();
+            GetIdGeneratorService().Download();
+            GetDriverService().Download();
+            GetCarService().Download();
+            GetShiftService().Download();
+        }
     }
 }

@@ -4,11 +4,6 @@ namespace TaxiData.Models
 {
     public class Car
     {
-        public int Id { get; private set; }
-        public Color Color { get; private set; }
-        public string Model { get; private set; }
-        public VIN Vin { get; private set; }
-
         public Car(Color color, string model, string vin, int id)
         {
             Color = color;
@@ -16,6 +11,11 @@ namespace TaxiData.Models
             Id = id;
             Vin = new VIN(vin);
         }
+
+        public int Id { get; private set; }
+        public Color Color { get; private set; }
+        public string Model { get; private set; }
+        public VIN Vin { get; private set; }
 
         public void SetModel(string model)
         {

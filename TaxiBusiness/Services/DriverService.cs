@@ -26,7 +26,7 @@ namespace TaxiBusiness.Services
         public void Add(string name, int regCardid)
         {
             RegistrationCard regCard = new RegistrationCard(name, regCardid);
-            _drivers.Add(new Driver(regCard, MainService.GetIdGeneratorService().GetNextDriverId()));
+            _drivers.Add(new Driver(regCard, MainService.GetIdGeneratorService().IdGenerator.GenerateDriverId()));
         }
 
         public void Remove(Driver driver)

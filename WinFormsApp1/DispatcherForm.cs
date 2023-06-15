@@ -41,8 +41,8 @@ namespace TaxiClient
             foreach (var order in MainService.GetOrderService().Orders)
             {
                 ListViewItem item = new ListViewItem(order.Driver.RegistrationCard.Name);
-                item.SubItems.Add(order.Client.Name);
-                item.SubItems.Add(order.Client.Satisfaction);
+                item.SubItems.Add(order.ClientName);
+                item.SubItems.Add(order.Satisfaction);
                 OrderListView.Items.Add(item);
             }
         }

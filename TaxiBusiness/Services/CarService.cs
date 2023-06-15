@@ -17,7 +17,7 @@ namespace TaxiBusiness.Services
 
         public void AddCar(Color color, string model, string vin)
         {
-            _cars.Add(new Car(color, model, vin, MainService.GetIdGeneratorService().GetNextCarId()));
+            _cars.Add(new Car(color, model, vin, MainService.GetIdGeneratorService().IdGenerator.GenerateCarId()));
         }
         public void RemoveCar(Car car)
         {

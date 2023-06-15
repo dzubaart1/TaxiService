@@ -9,8 +9,6 @@ namespace WinFormsApp1
         public MainForm()
         {
             InitializeComponent();
-            MainService.Upload();
-
             _mainFormCntrl = new MainFormCntrl();
         }
 

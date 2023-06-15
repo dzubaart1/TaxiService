@@ -24,7 +24,7 @@ namespace TaxiBusiness.Services
 
         public void Add(Driver driver, string client)
         {
-            _orders.Add(new Order(driver, client));
+            _orders.Add(new Order(driver, client, MainService.GetIdGeneratorService().IdGenerator.GenerateOrderId()));
         }
 
     }
