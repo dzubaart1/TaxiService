@@ -46,12 +46,10 @@ namespace TaxiClient
         {
             MainService.GetShiftService().ClearShift();
             var dispatcher = MainService.GetUserService().FindUser(DispatcherComboBox.Text);
-            int i = 0;
-            foreach (var driver in DriversListView.SelectedItems)
+            foreach (ListViewItem driver in DriversListView.SelectedItems)
             {
-                Driver selectedDriver = MainService.GetDriverService().GetDriver(int.Parse(DriversListView.SelectedItems[i].Text));
+                Driver selectedDriver = MainService.GetDriverService().GetDriver(int.Parse(driver.SubItems[0].Text));
                 driverList.Add(selectedDriver);
-                i++;
             }
             MainService.GetShiftService().Add(dispatcher, driverList);
             _adminForm.Show();

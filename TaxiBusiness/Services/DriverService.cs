@@ -1,4 +1,5 @@
-﻿using TaxiData.Models;
+﻿using System.Diagnostics;
+using TaxiData.Models;
 
 namespace TaxiBusiness.Services
 {
@@ -51,7 +52,18 @@ namespace TaxiBusiness.Services
 
         public Driver GetDriver(int id)
         {
-            var res = _drivers.Find(driver => driver.Id.Equals(id));
+            var res = _drivers.Find(driver => driver.RegistrationCard.Id.Equals(id));
+            if (res is null)
+            {
+                throw new ArgumentException("[-] There is not id in the database");
+            }
+            return res;
+        }
+
+        public Driver GetDriver(string name)
+        {
+            Debug.Write(name);
+            var res = _drivers.Find(driver => driver.RegistrationCard.Name.Equals(name));
             if (res is null)
             {
                 throw new ArgumentException("[-] There is not id in the database");

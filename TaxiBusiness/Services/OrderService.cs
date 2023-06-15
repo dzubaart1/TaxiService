@@ -1,18 +1,30 @@
-﻿using TaxiData.Entities;
+﻿using TaxiData.Models;
 
 namespace TaxiBusiness.Services
 {
-    public class OrderService : IService<User>
+    public class OrderService : IService<List<Order>>
     {
-        public User Download()
+        private List<Order> _orders;
+
+        public OrderService()
         {
-            //throw new NotImplementedException();
-            return null;
+            _orders = Download();
+        }
+
+        public IReadOnlyCollection<Order> Orders => _orders;
+        public List<Order> Download()
+        {
+            return MainService.GetJsonStorage().GetOrders() ?? new List<Order>();
         }
 
         public void Upload()
         {
-            //throw new NotImplementedException();
+            MainService.GetJsonStorage().Save(_orders);
+        }
+
+        public void Add(Driver driver, string client)
+        {
+            _orders.Add(new Order(driver, client));
         }
 
     }

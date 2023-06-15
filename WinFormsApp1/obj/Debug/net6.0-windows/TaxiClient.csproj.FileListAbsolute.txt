@@ -75,3 +75,4 @@ C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-win
 C:\Users\Dzubaart\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.Services.CarService.CarServiceForm.resources
 C:\Users\HYPERPC\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.Services.CarService.CarServiceForm.resources
 C:\Users\HYPERPC\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.ShiftForm.resources
+C:\Users\HYPERPC\Documents\GitHub\TaxiService\WinFormsApp1\obj\Debug\net6.0-windows\TaxiClient.Services.OrderService.CreateOrderForm.resources

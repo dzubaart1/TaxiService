@@ -7,6 +7,9 @@
     <Compile Update="Services\DriverService\AddNewDriverForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Services\OrderService\CreateOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Services\UserService\AddNewUserForm.cs">
       <SubType>Form</SubType>
     </Compile>

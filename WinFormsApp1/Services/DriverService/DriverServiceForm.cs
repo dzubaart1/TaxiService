@@ -12,10 +12,10 @@ namespace TaxiClient
 
             _adminForm = adminForm;
 
-            UpdateUserListView();
+            UpdateDriverListView();
         }
 
-        private void UpdateUserListView()
+        private void UpdateDriverListView()
         {
             foreach (var driver in MainService.GetDriverService().Drivers)
             {
@@ -35,7 +35,7 @@ namespace TaxiClient
         private void DriverServiceForm_Activated(object sender, EventArgs e)
         {
             DriverListView.Items.Clear();
-            UpdateUserListView();
+            UpdateDriverListView();
         }
 
         private void DriverServiceForm_FormClosing(object sender, FormClosingEventArgs e)
