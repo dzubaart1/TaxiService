@@ -52,8 +52,7 @@ namespace TaxiClient
                 throw new ArgumentException($"[-] There is not that dispatcher {DispatcherComboBox.Text}");
             }
 
-            var shift = new Shift();
-            shift.SetDispatcher(dispatcher);
+            var shift = new Shift(dispatcher, null);
 
             foreach (ListViewItem driver in DriversListView.SelectedItems)
             {

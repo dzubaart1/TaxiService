@@ -11,13 +11,14 @@ namespace TaxiBusiness.Services
         public ShiftService()
         {
             _shift = Download();
+            Debug.WriteLine("Shift " + _shift.Dispatcher);
         }
 
         public Shift Shift => _shift;
         public Shift Download()
         {
             Debug.WriteLine("-------DOWNLOAD----------");
-            return MainService.GetJsonStorage().GetShift() ?? new Shift();
+            return MainService.GetJsonStorage().GetShift() ?? new Shift(null, null);
         }
 
         public void Upload()

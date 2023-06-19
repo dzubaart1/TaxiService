@@ -1,4 +1,5 @@
-﻿using TaxiData.Models;
+﻿using System.Diagnostics;
+using TaxiData.Models;
 
 namespace TaxiData.Entities
 {
@@ -12,6 +13,7 @@ namespace TaxiData.Entities
             UserType = userType;
             Id = id;
         }
+
         public int Id { get; private set; }
         public string Login { get; private set; }
         public string Password { get; private set; }

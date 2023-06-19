@@ -5,14 +5,20 @@ namespace TaxiData.Models
 {
     public class Shift
     {
-        public User? Dispatcher { get; private set; }
+        public User Dispatcher { get; private set; }
         public List<Driver> DriverList { get; private set; }
 
-        public Shift()
+        public Shift(User? dispatcher, List<Driver>? driverList)
         {
-            Debug.WriteLine("----New Shift----");
-            Dispatcher = null;
-            DriverList = new List<Driver>();
+            if(driverList is null)
+            {
+                DriverList = new List<Driver>();
+            }
+            else
+            {
+                DriverList = driverList;
+            }
+            Dispatcher = dispatcher;
         }
 
         public void ClearShift()

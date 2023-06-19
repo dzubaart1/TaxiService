@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Q8tyiozAvM2Sofd4kbxgM+paeiI5E3oQ0a+emSIT3w5bFLe+v7V1gutZDc03vzrOSb+lTWz40/P/ncWiZxZ6pg==",
+  "dgSpecHash": "vW5VxPg1Gd1lC28iplm+/73ydPGOAD5LBj3zjdGqeWysYXS7F2CtqabBV1dltmiv6+KOpQ73l4/5SMM7IFRVhw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HYPERPC\\Documents\\GitHub\\TaxiService\\WinFormsApp1\\TaxiClient.csproj",
+  "projectFilePath": "C:\\Users\\Dzubaart\\Documents\\GitHub\\TaxiService\\WinFormsApp1\\TaxiClient.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\HYPERPC\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Dzubaart\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

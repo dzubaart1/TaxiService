@@ -71,6 +71,7 @@ namespace TaxiClient
             {
                 return;
             }
+
             DispatcherLabel.Text = disp.Login.ToString();
 
             foreach (var driver in driverList)
