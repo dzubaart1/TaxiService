@@ -231,9 +231,9 @@
             DispatcherLabel.AutoSize = true;
             DispatcherLabel.Location = new Point(102, 0);
             DispatcherLabel.Name = "DispatcherLabel";
-            DispatcherLabel.Size = new Size(63, 15);
+            DispatcherLabel.Size = new Size(29, 15);
             DispatcherLabel.TabIndex = 2;
-            DispatcherLabel.Text = "Dispatcher";
+            DispatcherLabel.Text = "Null";
             // 
             // DriverListView
             // 

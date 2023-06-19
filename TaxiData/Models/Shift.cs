@@ -1,4 +1,5 @@
-﻿using TaxiData.Entities;
+﻿using System.Diagnostics;
+using TaxiData.Entities;
 
 namespace TaxiData.Models
 {
@@ -9,6 +10,7 @@ namespace TaxiData.Models
 
         public Shift()
         {
+            Debug.WriteLine("----New Shift----");
             Dispatcher = null;
             DriverList = new List<Driver>();
         }

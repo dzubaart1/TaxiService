@@ -29,8 +29,8 @@ namespace TaxiClient.Services.CarService
 
         private void AddCarBtn_Click(object sender, EventArgs e)
         {
-            /*AddNewDriverForm addNewDriverForm = new AddNewDriverForm(this);
-            addNewDriverForm.Show();*/
+            AddNewCarForm addNewCarForm = new AddNewCarForm(this);
+            addNewCarForm.Show();
             Hide();
         }
 
@@ -52,9 +52,9 @@ namespace TaxiClient.Services.CarService
                 return;
             }
 
-            Driver selectedDriver = MainService.GetDriverService().GetDriver(int.Parse(CarListView.SelectedItems[0].Text));
-            /*EditDriverForm editDriverForm = new EditDriverForm(selectedDriver, this);
-            editDriverForm.Show();*/
+            Car selectedCar = MainService.GetCarService().GetCar(int.Parse(CarListView.SelectedItems[0].Text));
+            EditCarForm editCarForm = new EditCarForm(selectedCar, this);
+            editCarForm.Show();
             Hide();
         }
     }

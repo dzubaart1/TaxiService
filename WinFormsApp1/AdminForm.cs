@@ -1,4 +1,5 @@
-﻿using TaxiBusiness.Services;
+﻿using System.Diagnostics;
+using TaxiBusiness.Services;
 using TaxiClient.FormCntrls;
 using TaxiClient.Services.CarService;
 using TaxiData.Entities;
@@ -66,7 +67,7 @@ namespace TaxiClient
             var disp = MainService.GetShiftService().Shift.Dispatcher;
             var driverList = MainService.GetShiftService().Shift.DriverList;
 
-            if(disp is null || driverList.Count == 0)
+            if (disp is null || driverList.Count == 0)
             {
                 return;
             }

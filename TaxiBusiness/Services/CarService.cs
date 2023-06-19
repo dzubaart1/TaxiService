@@ -15,7 +15,7 @@ namespace TaxiBusiness.Services
 
         public IReadOnlyCollection<Car> Cars => _cars;
 
-        public void AddCar(Color color, string model, string vin)
+        public void AddCar(CarColor color, string model, string vin)
         {
             _cars.Add(new Car(color, model, vin, MainService.GetIdGeneratorService().IdGenerator.GenerateCarId()));
         }
@@ -33,7 +33,7 @@ namespace TaxiBusiness.Services
             MainService.GetJsonStorage().Save(_cars);
         }
 
-        public void Edit(int id, Color color, string model, string vin)
+        public void Edit(int id, CarColor color, string model, string vin)
         {
             var targetCar = _cars.Find(car => car.Id.Equals(id));
 

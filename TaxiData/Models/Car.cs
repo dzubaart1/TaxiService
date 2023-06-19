@@ -4,66 +4,66 @@ namespace TaxiData.Models
 {
     public class Car
     {
-        public Car(Color color, string model, string vin, int id)
+        public Car(CarColor color, string model, string vin, int id)
         {
             Color = color;
             Model = model;
             Id = id;
-            Vin = new VIN(vin);
+            Vin = vin;
         }
 
         public int Id { get; private set; }
-        public Color Color { get; private set; }
+        public CarColor Color { get; private set; }
         public string Model { get; private set; }
-        public VIN Vin { get; private set; }
+        public string Vin { get; private set; }
 
         public void SetModel(string model)
         {
             Model = model;
         }
 
-        public void SetColor(Color color)
+        public void SetColor(CarColor color)
         {
             Color = color;
         }
 
         public void SetVin(string vin)
         {
-            Vin = new VIN(vin);
+            Vin = vin;
         }
 
-        public class VIN
-        {
-            public string Value { get; private set;}
+        //public class VIN
+        //{
+        //    public string Value { get; private set;}
 
-            public VIN(string value)
-            {
-                if(value.Length != 6)
-                {
-                    return;
-                }
+        //    public VIN(string value)
+        //    {
+        //        if(value.Length != 6)
+        //        {
+        //            return;
+        //        }
 
-                if (char.IsLetter(value[0])&&
-                    char.IsDigit(value[1])&&
-                    char.IsDigit(value[2])&&
-                    char.IsDigit(value[3]) &&
-                    char.IsLetter(value[4]) &&
-                    char.IsLetter(value[5]))
-                {
-                    Value = value;
-                }
-                else
-                {
-                    throw new ArgumentException("[-] Invalid VIN");
-                }
-            }
+        //        if (char.IsLetter(value[0])&&
+        //            char.IsDigit(value[1])&&
+        //            char.IsDigit(value[2])&&
+        //            char.IsDigit(value[3]) &&
+        //            char.IsLetter(value[4]) &&
+        //            char.IsLetter(value[5]))
+        //        {
+        //            Value = value;
+        //        }
+        //        else
+        //        {
+        //            throw new ArgumentException("[-] Invalid VIN");
+        //        }
+        //    }
 
-            public override string ToString()
-            {
-                return Value;
-            }
+        //    public override string ToString()
+        //    {
+        //        return Value;
+        //    }
 
-        }
+        //}
     }
-    
+
 }
